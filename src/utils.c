@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/26 11:56:30 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/04/03 16:34:12 by drubio-m         ###   ########.fr       */
+/*   Created: 2023/04/03 16:32:38 by drubio-m          #+#    #+#             */
+/*   Updated: 2023/04/03 16:33:46 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
-# include <unistd.h>
-# include <stdlib.h>
-# include <limits.h>
-# include "../libft/libft.h"
-
-// Utils
-void free_array(char **str);
-
-#endif
+void free_array(char **str)
+{
+    int i;
+    
+    i = 0;
+    while (str[i])
+        i++;
+    while (i >= 0)
+    {
+        free(str[i])
+        i--;
+    }
+}
