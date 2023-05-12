@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_input.c                                      :+:      :+:    :+:   */
+/*   manage_parse.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 00:41:42 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/04/03 17:31:35 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/12 16:38:59 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,34 @@ int	check_num(char *str)
 		return (0);
 	}
 	return (1);
+}
+
+// It will add each argument to one element on the list, 
+// If there is only one big argument it will use split
+void	first_stack(t_list **stack, char *argv[], int argc)
+{
+	int i;
+	int j;
+	char **arguments
+	
+	i = 1;
+	while (i < argc)
+	{
+		j = 0;
+		arguments = ft_split(argv[1], ' ');
+		while (arguments[j])
+		{
+			if (!check_num(arguments[j]))
+			{
+				ft_lstadd_back(stack, ft_lstnew(ft_atoi(arguments[j])));
+				free(arguments[j]);
+				j++;
+			}
+			else
+				ft_error();
+		}
+		free(arguments);
+		i++;
+	} 
+	return (0);
 }

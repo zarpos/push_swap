@@ -6,36 +6,27 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:25:06 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/04/03 17:30:48 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/12 13:48:45 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-// It will add each argument to one element on the list, 
-// If there is only one big argument it will use split
-void	first_stack(t_list **stack, char *argv[], int argc)
-{
-	t_list	*new;
-	char	**input;
-	int		i;
 
-	if (argc == 2)
-		input = ft_split(argv[1], ' ');
-	i = 1;
-	input = argv;
-	while (input[i])
-	{
-		new = ft_lstnew(ft_atoi(input[i]));
-		ft_lstadd_back(stack, new);
-		i++;
-	}
-	if (argc == 2)
-		free_array(input);
-}
 
 int	main(int argc, char *argv[])
 {
-
+	t_stack *stack_a;
+	t_stack *stack_b;
+	
+	stack_a = NULL;
+	stack_b = NULL;
+	if (argc == 1)
+		return (1);
+	else if (argc == 2)
+		argv = ft_split(argv[1], ' ');
+	
+	
+	
 	return (0);
 }
