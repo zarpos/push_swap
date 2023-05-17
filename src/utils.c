@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:32:38 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/12 16:33:07 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/17 22:02:05 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void ft_error()
 	exit(EXIT_FAILURE);
 }
 
+/*
 void	free_array(char **str)
 {
 	int	i;
@@ -30,4 +31,4 @@ void	free_array(char **str)
 		free(str[i]);
 		i--;
 	}
-}
+}*/

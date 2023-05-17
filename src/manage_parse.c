@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 00:41:42 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/12 16:38:59 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/17 21:59:39 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,17 @@ int	check_num(char *str)
 }
 
 // It will add each argument to one element on the list, 
-// If there is only one big argument it will use split
 void	first_stack(t_list **stack, char *argv[], int argc)
 {
 	int i;
 	int j;
-	char **arguments
+	char **arguments;
 	
 	i = 1;
 	while (i < argc)
 	{
 		j = 0;
-		arguments = ft_split(argv[1], ' ');
+		arguments = ft_split(argv[i], ' ');
 		while (arguments[j])
 		{
 			if (!check_num(arguments[j]))
@@ -61,4 +60,24 @@ void	first_stack(t_list **stack, char *argv[], int argc)
 		i++;
 	} 
 	return (0);
+}
+
+void check_duplicates(t_list *stack)
+{
+	t_list *check;
+	
+	while (stack)
+	{
+		check = stack->next;
+		while (check)
+		{
+			if (stack->value == check->value)
+			{
+				ft_error();
+			}
+			check = check->next;
+		}
+		stack = stack->next;
+	}	
+	return 0;
 }

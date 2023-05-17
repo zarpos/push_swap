@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 11:56:30 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/12 16:37:59 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/17 22:03:27 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,16 @@
 # include <limits.h>
 # include "../libft/libft.h"
 
-typedef struct s_stack
-{
-    int     value;
-    int     index;
-    struct  s_stack *next;
-}   t_stack;
+// Parse
+int     check_num(char *str);
+void    first_stack(t_list **stack, char *argv[], int argc);
+void    check_duplicates(t_list *stack);
+
+
+
 
 // Utils
-void free_array(char **str);
-void ft_error();
+void    ft_error();
+//void free_array(char **str);
 
 #endif
