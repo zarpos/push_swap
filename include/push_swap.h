@@ -18,6 +18,13 @@
 # include <limits.h>
 # include "../libft/libft.h"
 
+typedef struct s_list
+{
+	int				value;
+	int				index;
+	struct s_list	*next;
+}	t_list;
+
 // Parse
 int     check_num(char *str);
 void    first_stack(t_list **stack, char *argv[], int argc);

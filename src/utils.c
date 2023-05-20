@@ -6,11 +6,11 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:32:38 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/17 22:02:05 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/18 11:48:23 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 void ft_error()
 {
