@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 00:41:42 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/18 11:47:01 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/20 18:30:30 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,14 @@ int	check_num(char *str)
 	return (1);
 }
 
-// It will add each argument to one element on the list, 
+// It will add each argument to one element on the list using split.
+// afterwards it will convert them to ints using the atoi function.
 void	first_stack(t_list **stack, char *argv[], int argc)
 {
-	int i;
-	int j;
-	char **arguments;
-	
+	int		i;
+	int		j;
+	char	**arguments;
+
 	i = 1;
 	while (i < argc)
 	{
@@ -58,7 +59,7 @@ void	first_stack(t_list **stack, char *argv[], int argc)
 		}
 		free(arguments);
 		i++;
-	} 
+	}
 	return ;
 }
 

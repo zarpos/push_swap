@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 11:56:30 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/17 22:03:27 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/20 18:10:04 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,5 @@ void    check_duplicates(t_list *stack);
 
 // Utils
 void    ft_error();
-//void free_array(char **str);
 
 #endif
