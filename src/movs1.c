@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 18:31:19 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/21 19:11:21 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/21 20:23:49 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,15 +101,17 @@ void	pb(t_list **stack_a, t_list **stack_b)
 void	ra(t_list **stack_a)
 {
 	t_list *temp;
+	t_list *temp2;
 	
 	if (ft_lstsize(*stack_a) > 1)
 	{
 		temp = *stack_a;
-		*stack_a = (*stack_a)->next;
+		temp2 = *stack_a;
+		while (temp2->next != NULL)
+			temp2 = temp2->next;
+		*stack_a = temp->next;
 		temp->next = NULL;
-		while(*stack_a)
-			*stack_a = (*stack_a)->next;
-		(*stack_a)->next = temp;
+		temp2->next = temp;
 	}
 	return ;
 }
@@ -117,15 +119,17 @@ void	ra(t_list **stack_a)
 void	rb(t_list **stack_b)
 {
 	t_list *temp;
+	t_list *temp2;
 	
 	if (ft_lstsize(*stack_b) > 1)
 	{
 		temp = *stack_b;
-		*stack_b = (*stack_b)->next;
+		temp2 = *stack_b;
+		while (temp2->next != NULL)
+			temp2 = temp2->next;
+		*stack_b = temp->next;
 		temp->next = NULL;
-		while(*stack_b)
-			*stack_b = (*stack_b)->next;
-		(*stack_b)->next = temp;
+		temp2->next = temp;
 	}
 	return ;
 }
@@ -133,25 +137,29 @@ void	rb(t_list **stack_b)
 void	rr(t_list **stack_a, t_list **stack_b)
 {
 	t_list *temp;
+	t_list *temp2;
 	
 	if (ft_lstsize(*stack_a) > 1)
 	{
 		temp = *stack_a;
-		*stack_a = (*stack_a)->next;
+		temp2 = *stack_a;
+		while (temp2->next != NULL)
+			temp2 = temp2->next;
+		*stack_a = temp->next;
 		temp->next = NULL;
-		while(*stack_a)
-			*stack_a = (*stack_a)->next;
-		(*stack_a)->next = temp;
+		temp2->next = temp;
 	}
 	temp = NULL;
+	temp2 = NULL;
 	if (ft_lstsize(*stack_b) > 1)
 	{
 		temp = *stack_b;
-		*stack_b = (*stack_b)->next;
+		temp2 = *stack_b;
+		while (temp2->next != NULL)
+			temp2 = temp2->next;
+		*stack_b = temp->next;
 		temp->next = NULL;
-		while(*stack_b)
-			*stack_b = (*stack_b)->next;
-		(*stack_b)->next = temp;
+		temp2->next = temp;
 	}
 	return ;
 }
@@ -159,14 +167,18 @@ void	rr(t_list **stack_a, t_list **stack_b)
 void	rra(t_list **stack_a)
 {
 	t_list *temp;
+	t_list *temp2;
 	if (ft_lstsize(*stack_a) > 1)
 	{
-		while((*stack_a)->next != NULL)
-			*stack_a = (*stack_a)->next;
-		temp = *stack_a;
-		(*stack_a)->next = NULL;
-		temp->next = *stack_a;
-		*stack_a = temp;
+		temp2 = *stack_a;
+		while(temp2->next != NULL)
+		{
+			temp = temp2;
+			temp2 = temp2->next;
+		}
+		temp2->next = *stack_a;
+		*stack_a = temp2;
+		temp->next = NULL;
 	}
 	return ;
 }
@@ -174,14 +186,18 @@ void	rra(t_list **stack_a)
 void	rrb(t_list **stack_b)
 {
 	t_list *temp;
+	t_list *temp2;
 	if (ft_lstsize(*stack_b) > 1)
 	{
-		while((*stack_b)->next != NULL)
-			*stack_b = (*stack_b)->next;
-		temp = *stack_b;
-		(*stack_b)->next = NULL;
-		temp->next = *stack_b;
-		*stack_b = temp;
+		temp2 = *stack_b;
+		while(temp2->next != NULL)
+		{
+			temp = temp2;
+			temp2 = temp2->next;
+		}
+		temp2->next = *stack_b;
+		*stack_b = temp2;
+		temp->next = NULL;
 	}
 	return ;
 }
@@ -189,67 +205,33 @@ void	rrb(t_list **stack_b)
 void	rrr(t_list **stack_a, t_list **stack_b)
 {
 	t_list *temp;
+	t_list *temp2;
 	if (ft_lstsize(*stack_a) > 1)
 	{
-		while((*stack_a)->next != NULL)
-			*stack_a = (*stack_a)->next;
-		temp = *stack_a;
-		(*stack_a)->next = NULL;
-		temp->next = *stack_a;
-		*stack_a = temp;
+		temp2 = *stack_a;
+		while(temp2->next != NULL)
+		{
+			temp = temp2;
+			temp2 = temp2->next;
+		}
+		temp2->next = *stack_a;
+		*stack_a = temp2;
+		temp->next = NULL;
 	}
 	temp = NULL;
+	temp2 = NULL;
+
 	if (ft_lstsize(*stack_b) > 1)
 	{
-		while((*stack_b)->next != NULL)
-			*stack_b = (*stack_b)->next;
-		temp = *stack_b;
-		(*stack_b)->next = NULL;
-		temp->next = *stack_b;
-		*stack_b = temp;
+		temp2 = *stack_b;
+		while(temp2->next != NULL)
+		{
+			temp = temp2;
+			temp2 = temp2->next;
+		}
+		temp2->next = *stack_b;
+		*stack_b = temp2;
+		temp->next = NULL;
 	}
 	return ;
 }
-
-/*
-int main(void)
-{
-	t_lista *hola;
-	t_lista	*a;
-	t_lista *b;
-	t_lista *c;
-	t_lista *temp;
-	
-	hola = (t_lista *)malloc(sizeof(t_lista));
-	temp = (t_lista *)malloc(sizeof(t_lista));
-	a = (t_lista *)malloc(sizeof(t_lista));
-	b = (t_lista *)malloc(sizeof(t_lista));
-	hola->value = 1;
-	a->value = 2;
-	b->value = 3;
-	c->value = 4;
-	c->next = NULL;
-	b->next = c;
-	a->next = b;
-	hola->next = a;
-
-	temp = hola; 
-	printf("valor %d\n", temp->value);
-	printf("valor %d\n", temp->next->value);
-	printf("valor %d\n", temp->next->next->value);
-	printf("valor %d\n", temp->next->next->next->value);
-
-	rra(&hola);
-	temp = hola;
-	printf("\n");
-	while(temp)
-	{
-		printf("valor %d\n", temp->value);
-		temp = temp->next;
-	}
- 	printf("valor %d\n", hola->value);
-	printf("valor %d\n", hola->next->value);
-	printf("valor %d\n", hola->next->next->value); 
-	return (0);
-}
-*/
