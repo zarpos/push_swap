@@ -6,11 +6,12 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 18:31:19 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/21 13:24:15 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/21 19:11:21 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "../include/push_swap.h"
+#include "../include/push_swap.h"
+/*
 # include <stdio.h>
 # include <stdarg.h>
 # include <string.h>
@@ -24,11 +25,11 @@ typedef struct s_lista
 	int				index;
 	struct s_lista	*next;
 }	t_lista; 
-
-void	sa(t_lista **stack_a)
+*/
+void	sa(t_list **stack_a)
 {
-	t_lista	*swap;
-	t_lista	*swap2;
+	t_list	*swap;
+	t_list	*swap2;
 	
 	swap = *stack_a; //swap = 2 1 3
 	swap2 = swap->next; // swap2 = 1 y 3
@@ -38,10 +39,10 @@ void	sa(t_lista **stack_a)
 	return ;
 }
 
-void	sb(t_lista **stack_b)
+void	sb(t_list **stack_b)
 {
-	t_lista	*swap;
-	t_lista	*swap2;
+	t_list	*swap;
+	t_list	*swap2;
 	
 	swap = *stack_b;
 	swap2 = swap->next;
@@ -51,10 +52,10 @@ void	sb(t_lista **stack_b)
 	return ;
 }
 
-void	ss(t_lista **stack_a, t_lista **stack_b)
+void	ss(t_list **stack_a, t_list **stack_b)
 {
-	t_lista	*swap;
-	t_lista	*swap2;
+	t_list	*swap;
+	t_list	*swap2;
 	
 	swap = *stack_a;
 	swap2 = swap->next;
@@ -71,9 +72,9 @@ void	ss(t_lista **stack_a, t_lista **stack_b)
 	return ;
 }
 
-void	pa(t_lista **stack_a, t_lista **stack_b)
+void	pa(t_list **stack_a, t_list **stack_b)
 {
-	t_lista *temp;
+	t_list *temp;
 	
 	if (!*stack_b)
 		return ;
@@ -84,9 +85,9 @@ void	pa(t_lista **stack_a, t_lista **stack_b)
 	return ;
 }
 
-void	pb(t_lista **stack_a, t_lista **stack_b)
+void	pb(t_list **stack_a, t_list **stack_b)
 {
-	t_lista *temp;
+	t_list *temp;
 	
 	if (!*stack_a)
 		return ;
@@ -97,9 +98,9 @@ void	pb(t_lista **stack_a, t_lista **stack_b)
 	return ;
 }
 
-void	ra(t_lista **stack_a)
+void	ra(t_list **stack_a)
 {
-	t_lista *temp;
+	t_list *temp;
 	
 	if (ft_lstsize(*stack_a) > 1)
 	{
@@ -107,15 +108,15 @@ void	ra(t_lista **stack_a)
 		*stack_a = (*stack_a)->next;
 		temp->next = NULL;
 		while(*stack_a)
-			(*stack_a)->next;
+			*stack_a = (*stack_a)->next;
 		(*stack_a)->next = temp;
 	}
 	return ;
 }
 
-void	rb(t_lista **stack_b)
+void	rb(t_list **stack_b)
 {
-	t_lista *temp;
+	t_list *temp;
 	
 	if (ft_lstsize(*stack_b) > 1)
 	{
@@ -123,15 +124,15 @@ void	rb(t_lista **stack_b)
 		*stack_b = (*stack_b)->next;
 		temp->next = NULL;
 		while(*stack_b)
-			(*stack_b)->next;
+			*stack_b = (*stack_b)->next;
 		(*stack_b)->next = temp;
 	}
 	return ;
 }
 
-void	rr(t_lista **stack_a, t_lista **stack_b)
+void	rr(t_list **stack_a, t_list **stack_b)
 {
-	t_lista *temp;
+	t_list *temp;
 	
 	if (ft_lstsize(*stack_a) > 1)
 	{
@@ -139,7 +140,7 @@ void	rr(t_lista **stack_a, t_lista **stack_b)
 		*stack_a = (*stack_a)->next;
 		temp->next = NULL;
 		while(*stack_a)
-			(*stack_a)->next;
+			*stack_a = (*stack_a)->next;
 		(*stack_a)->next = temp;
 	}
 	temp = NULL;
@@ -149,15 +150,15 @@ void	rr(t_lista **stack_a, t_lista **stack_b)
 		*stack_b = (*stack_b)->next;
 		temp->next = NULL;
 		while(*stack_b)
-			(*stack_b)->next;
+			*stack_b = (*stack_b)->next;
 		(*stack_b)->next = temp;
 	}
 	return ;
 }
 
-void	rra(t_lista **stack_a)
+void	rra(t_list **stack_a)
 {
-	t_lista *temp;
+	t_list *temp;
 	if (ft_lstsize(*stack_a) > 1)
 	{
 		while((*stack_a)->next != NULL)
@@ -170,9 +171,9 @@ void	rra(t_lista **stack_a)
 	return ;
 }
 
-void rrb(t_lista **stack_b)
+void	rrb(t_list **stack_b)
 {
-	t_lista *temp;
+	t_list *temp;
 	if (ft_lstsize(*stack_b) > 1)
 	{
 		while((*stack_b)->next != NULL)
@@ -185,9 +186,9 @@ void rrb(t_lista **stack_b)
 	return ;
 }
 
-void rrr(t_lista **stack_a, t_lista **stack_b)
+void	rrr(t_list **stack_a, t_list **stack_b)
 {
-	t_lista *temp;
+	t_list *temp;
 	if (ft_lstsize(*stack_a) > 1)
 	{
 		while((*stack_a)->next != NULL)
@@ -210,6 +211,7 @@ void rrr(t_lista **stack_a, t_lista **stack_b)
 	return ;
 }
 
+/*
 int main(void)
 {
 	t_lista *hola;
@@ -245,8 +247,9 @@ int main(void)
 		printf("valor %d\n", temp->value);
 		temp = temp->next;
 	}
-/* 	printf("valor %d\n", hola->value);
+ 	printf("valor %d\n", hola->value);
 	printf("valor %d\n", hola->next->value);
-	printf("valor %d\n", hola->next->next->value); */
+	printf("valor %d\n", hola->next->next->value); 
 	return (0);
 }
+*/

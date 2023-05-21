@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+         #
+#    By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/25 20:18:27 by drubio-m          #+#    #+#              #
-#    Updated: 2023/03/10 20:49:33 by crtorres         ###   ########.fr        #
+#    Updated: 2023/05/21 19:09:22 by drubio-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,8 @@ SRC = ft_bzero.c ft_isalpha.c ft_isdigit.c ft_memcpy.c ft_memset.c \
 	  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 	  ft_c.c ft_d-i.c ft_p.c ft_printf.c ft_s.c ft_u.c ft_x-X.c \
 	  get_next_line.c get_next_line_utils.c
-BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
-		ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-		ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+BONUS = ft_lstnew_bonus.c ft_lstsize_bonus.c \
+		ft_lstlast_bonus.c ft_lstadd_back_bonus.c
 OBJS = $(SRC:.c=.o)
 BONUS_OBJS = $(BONUS:.c=.o)
 C = gcc -c
