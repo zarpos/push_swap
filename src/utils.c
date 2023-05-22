@@ -6,15 +6,8 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:32:38 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/20 18:09:49 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/22 16:31:48 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
-void ft_error()
-{
-	ft_printf("%s", "\nError\n");
-	exit(EXIT_FAILURE);
-}
-

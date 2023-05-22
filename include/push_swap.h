@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 11:56:30 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/22 16:29:28 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/22 16:52:26 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ void	sb(t_list **stack_b);
 void	ss(t_list **stack_a, t_list **stack_b);
 void	pa(t_list **stack_a, t_list **stack_b);
 void	pb(t_list **stack_a, t_list **stack_b);
-void	ra(t_list **stack_a);
-void	rb(t_list **stack_b);
+void	ra(t_list **stack_a, char mov);
+void	rb(t_list **stack_b, char mov);
 void	rr(t_list **stack_a, t_list **stack_b);
-void	rra(t_list **stack_a);
-void    rrb(t_list **stack_b);
+void	rra(t_list **stack_a, char mov);
+void    rrb(t_list **stack_b, char mov);
 void    rrr(t_list **stack_a, t_list **stack_b);
 
 

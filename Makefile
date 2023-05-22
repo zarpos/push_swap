@@ -6,11 +6,11 @@
 #    By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/25 19:37:41 by drubio-m          #+#    #+#              #
-#    Updated: 2023/05/21 19:15:29 by drubio-m         ###   ########.fr        #
+#    Updated: 2023/05/22 16:59:46 by drubio-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = push_swap.c manage_parse.c utils.c movs1.c
+SRC = push_swap.c manage_parse.c utils.c movs1.c movs2.c movs3.c
 SRC_DIR = src
 OBJS = $(addprefix $(SRC_DIR)/, $(SRC:.c=.o))
 C = gcc

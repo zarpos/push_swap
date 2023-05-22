@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:25:06 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/21 20:24:22 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/22 16:56:34 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int main(int argc, char *argv[])
 
 
 
+/*
 int main(void)
 {
 	t_list *hola;
@@ -94,7 +95,7 @@ int main(void)
 	printf("stack_b %d\n", temp2->next->next->value);
 	printf("stack_b %d\n", temp2->next->next->next->value);
 	
-	rrr(&hola, &adios);
+	rrb(&hola, 'r');
 	temp = hola;
 	temp2 = adios;
 	printf("\n\n\n");
@@ -112,10 +113,8 @@ int main(void)
 		temp2 = temp2->next;
 	}
 
-	/*
- 	printf("valor %d\n", hola->value);
-	printf("valor %d\n", hola->next->value);
-	printf("valor %d\n", hola->next->next->value); 
-	*/
+
+
 	return (0);
 }
+*/
