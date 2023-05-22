@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 11:56:30 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/21 18:48:34 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/22 16:29:28 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,6 @@
 # include <stdlib.h>
 # include <limits.h>
 # include "../libft/libft.h"
-
-/*
-typedef struct s_list
-{
-	int				value;
-	int				index;
-	struct s_list	*next;
-}	t_list;
-*/
 
 // Parse
 int     check_num(char *str);
@@ -46,16 +37,5 @@ void	rra(t_list **stack_a);
 void    rrb(t_list **stack_b);
 void    rrr(t_list **stack_a, t_list **stack_b);
 
-
-
-
-
-
-
-
-
-
-// Utils
-void    ft_error();
 
 #endif

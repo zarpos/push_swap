@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: drubio-m <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 22:46:26 by drubio-m          #+#    #+#             */
-/*   Updated: 2022/04/17 16:59:24 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/22 16:29:49 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	if (sol > 2147483647 && sign == 1)
-		return (-1);
+		ft_error();
 	if (sol > 2147483648 && sign == -1)
-		return (0);
+		ft_error();
 	return (sol * sign);
 }
 /*

@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 18:41:23 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/21 19:08:37 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/22 16:29:00 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,6 @@ char *ft_write_in_aux(int fd, char *aux);
 char *ft_print_line(char *str);
 char *ft_new_static(char *aux);
 char *ft_strjoin2(char *s1, char *s2);
+
+void ft_error();
 #endif
