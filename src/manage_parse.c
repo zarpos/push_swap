@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 00:41:42 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/20 18:30:30 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/23 16:39:11 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,10 @@ void	first_stack(t_list **stack, char *argv[], int argc)
 	return ;
 }
 
-void check_duplicates(t_list *stack)
+void	check_duplicates(t_list *stack)
 {
-	t_list *check;
-	
+	t_list	*check;
+
 	while (stack)
 	{
 		check = stack->next;

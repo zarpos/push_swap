@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 16:58:03 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/22 17:02:33 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/23 18:02:30 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,3 @@ void	rr(t_list **stack_a, t_list **stack_b)
 	ra(stack_a, 'r');
 	rb(stack_b, 'r');
 }
-

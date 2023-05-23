@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:25:06 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/23 13:44:35 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/23 18:04:54 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,32 +61,33 @@ int main(void)
 	f = (t_list *)malloc(sizeof(t_list));
 
 	
-	hola->value = 3;
-	a->value = 1;
-	b->value = 2;
-//	c->value = 4;
-//	c->next = NULL;
-	b->next = NULL;
-	a->next = b;
+	hola->value = 5;
+	a->value = 4;
+	b->value = 8;
+	c->value = 1;
+	d->value = 2;
 	hola->next = a;
+	a->next = b;
+	b->next = c;
+	c->next = d;
+	d->next = NULL;
 
 	temp = hola; 
 
 
-	adios->value = 5;
-	d->value = 6;
-	e->value = 7;
-	f->value = 8;
-	f->next = NULL;
-	e->next = f;
-	d->next = e;
-	adios->next = d;
+	// adios->value = 5;
+	// e->value = 7;
+	// f->value = 8;
+	// adios->next = e;
+	// e->next = f;
+	// f->next = NULL;
 
-	temp2 = adios; 
+	// temp2 = adios; 
 	printf("stack_a %d\n", temp->value);
 	printf("stack_a %d\n", temp->next->value);
 	printf("stack_a %d\n", temp->next->next->value);
-//	printf("stack_a %d\n", temp->next->next->next->value);
+	printf("stack_a %d\n", temp->next->next->next->value);
+	//printf("stack_a %d\n", temp->next->next->next->next->value);
 	
 	printf("\n\n\n");
 /*
@@ -96,7 +97,7 @@ int main(void)
 	printf("stack_b %d\n", temp2->next->next->next->value);
 	*/
 	
-	org3a(&hola);
+	org5(&hola, &adios);
 	temp = hola;
 //	temp2 = adios;
 	printf("\n\n\n");
@@ -115,7 +116,5 @@ int main(void)
 		temp2 = temp2->next;
 	}
 */
-
-
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 18:31:19 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/22 20:51:25 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/23 18:02:18 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,8 @@ void	sb(t_list **stack_b)
 	swap2 = swap->next;
 	*stack_b = swap2;
 	swap->next = swap2->next;
-    swap2->next = swap;
+	swap2->next = swap;
 	ft_putstr_fd("sb\n", 1);
-
 	return ;
 }
 
@@ -50,7 +49,7 @@ void	ss(t_list **stack_a, t_list **stack_b)
 	swap2 = swap->next;
 	*stack_a = swap2;
 	swap->next = swap2->next;
-    swap2->next = swap;
+	swap2->next = swap;
 	swap = NULL;
 	swap2 = NULL;
 	swap = *stack_b;
