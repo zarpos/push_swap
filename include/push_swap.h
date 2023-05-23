@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 11:56:30 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/22 21:28:44 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/23 13:26:39 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ void    rrr(t_list **stack_a, t_list **stack_b);
 int get_min(t_list *stack_a);
 int get_max(t_list *stack_a);
 int get_index(t_list *stack_a, int number);
+void    org3a(t_list **stack);
 
 #endif

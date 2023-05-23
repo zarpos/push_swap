@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:25:06 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/22 16:56:34 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/23 13:44:35 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
 
 
-/*
+
 int main(void)
 {
 	t_list *hola;
@@ -61,12 +61,12 @@ int main(void)
 	f = (t_list *)malloc(sizeof(t_list));
 
 	
-	hola->value = 1;
-	a->value = 2;
-	b->value = 3;
-	c->value = 4;
-	c->next = NULL;
-	b->next = c;
+	hola->value = 3;
+	a->value = 1;
+	b->value = 2;
+//	c->value = 4;
+//	c->next = NULL;
+	b->next = NULL;
 	a->next = b;
 	hola->next = a;
 
@@ -86,19 +86,21 @@ int main(void)
 	printf("stack_a %d\n", temp->value);
 	printf("stack_a %d\n", temp->next->value);
 	printf("stack_a %d\n", temp->next->next->value);
-	printf("stack_a %d\n", temp->next->next->next->value);
+//	printf("stack_a %d\n", temp->next->next->next->value);
 	
 	printf("\n\n\n");
-
+/*
 	printf("stack_b %d\n", temp2->value);
 	printf("stack_b %d\n", temp2->next->value);
 	printf("stack_b %d\n", temp2->next->next->value);
 	printf("stack_b %d\n", temp2->next->next->next->value);
+	*/
 	
-	rrb(&hola, 'r');
+	org3a(&hola);
 	temp = hola;
-	temp2 = adios;
+//	temp2 = adios;
 	printf("\n\n\n");
+
 	while(temp)
 	{
 		printf("stack_A %d\n", temp->value);
@@ -106,15 +108,14 @@ int main(void)
 	} 
 	
 	printf("\n");
-
+/*
 	while(temp2)
 	{
 		printf("stack_B %d\n", temp2->value);
 		temp2 = temp2->next;
 	}
-
+*/
 
 
 	return (0);
 }
-*/
