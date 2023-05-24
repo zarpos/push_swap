@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 00:41:42 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/23 16:39:11 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/24 14:02:56 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,8 @@ int	check_num(char *str)
 	len = ft_strlen(str);
 	if (((str[i] == '-' || str[i] == '+') && len > 1) || ft_isdigit(str[i]))
 	{
-		while (str[i])
+		while (str[++i])
 		{
-			i++;
 			if (!ft_isdigit(str[i]))
 				return (1);
 		}
@@ -44,17 +43,16 @@ void	first_stack(t_list **stack, char *argv[], int argc)
 	i = 1;
 	while (i < argc)
 	{
-		j = 0;
-		arguments = ft_split(argv[i], ' ');
-		while (arguments[j])
+		j = -1;
+		arguments = ft_split(argv[i], ' ');			
+		while (arguments[++j])
 		{
 			if (!check_num(arguments[j]))
 			{
 				ft_lstadd_back(stack, ft_lstnew(ft_atoi(arguments[j])));
 				free(arguments[j]);
-				j++;
 			}
-			else
+			else		
 				ft_error();
 		}
 		free(arguments);
@@ -80,3 +78,14 @@ void	check_duplicates(t_list *stack)
 	}	
 	return ;
 }
+
+/*
+void	parse(t_list **stack_a, int argc, char *argv[])
+{
+	if (argc == 1)
+		ft_error();
+	first_stack(stack_a, argv, argc);
+	check_duplicates(*stack_a);
+	return ;
+}
+*/

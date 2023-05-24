@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 11:56:30 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/24 11:12:19 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/24 13:41:35 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 int		check_num(char *str);
 void	first_stack(t_list **stack, char *argv[], int argc);
 void	check_duplicates(t_list *stack);
+void	parse(t_list **stack_a, int argc, char *argv[]);
 
 // Indexing
 t_list  *find_new_min(t_list **stack);
@@ -45,8 +46,10 @@ void	org3a(t_list **stack);
 void	org5(t_list **stack_a, t_list **stack_b);
 
 // Utils
+int     check_sorted(t_list *stack);
 int		get_min(t_list *stack_a);
 int		get_max(t_list *stack_a);
 int		get_index(t_list *stack_a, int number);
+
 
 #endif
