@@ -6,13 +6,13 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 16:28:20 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/22 16:44:42 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/25 18:39:12 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_error()
+void	ft_error(void)
 {
 	ft_printf("%s", "\nError\n");
 	exit(EXIT_FAILURE);

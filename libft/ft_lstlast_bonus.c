@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 18:56:43 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/21 19:22:06 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/25 18:39:47 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list *temp;
+	t_list	*temp;
 
 	temp = lst;
 	if (!lst)

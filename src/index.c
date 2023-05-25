@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 18:31:06 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/24 16:50:21 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/25 19:12:48 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_list	*find_new_min(t_list **stack)
 			ret = temp;
 			founded = 1;
 		}
-		ret = ret->next;
+		temp = temp->next;
 	}
 	return (ret);
 }
@@ -43,7 +43,7 @@ void	indexing_node(t_list **stack)
 	while (temp)
 	{
 		temp->index = index++;
-		temp->next = find_new_min(stack);
+		temp = find_new_min(stack);
 	}
 	return ;
 }

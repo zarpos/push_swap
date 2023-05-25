@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 00:41:42 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/24 14:02:56 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/25 18:36:38 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	first_stack(t_list **stack, char *argv[], int argc)
 	while (i < argc)
 	{
 		j = -1;
-		arguments = ft_split(argv[i], ' ');			
+		arguments = ft_split(argv[i], ' ');
 		while (arguments[++j])
 		{
 			if (!check_num(arguments[j]))
@@ -52,7 +52,7 @@ void	first_stack(t_list **stack, char *argv[], int argc)
 				ft_lstadd_back(stack, ft_lstnew(ft_atoi(arguments[j])));
 				free(arguments[j]);
 			}
-			else		
+			else
 				ft_error();
 		}
 		free(arguments);
