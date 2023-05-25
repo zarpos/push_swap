@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 18:16:55 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/25 19:22:54 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/25 20:05:24 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	radix(t_list **stack_a, t_list **stack_b)
 		while (i++ < fixed_size)
 		{
 			temp = *stack_a;
-			if (((temp->index >> bits) & i) == 1)
+			if (((temp->index >> bits) & 1) == 1)
 				ra(stack_a, 'a');
 			else
 				pb(stack_a, stack_b);
