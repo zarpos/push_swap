@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 11:56:30 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/24 13:41:35 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/25 17:42:52 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,11 @@ void	rrr(t_list **stack_a, t_list **stack_b);
 // Sorting
 void	org3a(t_list **stack);
 void	org5(t_list **stack_a, t_list **stack_b);
+
+// Radix
+int     bit_len(t_list **stack);
+
+
 
 // Utils
 int     check_sorted(t_list *stack);
