@@ -6,16 +6,11 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:25:06 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/26 16:42:17 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/26 17:04:08 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
-void	ft_leaks(void)
-{
-	system("leaks -q push_swap");
-}
 
 int	main(int argc, char *argv[])
 {
@@ -23,7 +18,6 @@ int	main(int argc, char *argv[])
 	t_list	*stack_b;
 	int		sorted;
 
-	atexit(ft_leaks);
 	stack_a = NULL;
 	stack_b = NULL;
 	if (argc < 2)
