@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 00:41:42 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/25 18:36:38 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/26 11:39:58 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,14 +78,3 @@ void	check_duplicates(t_list *stack)
 	}	
 	return ;
 }
-
-/*
-void	parse(t_list **stack_a, int argc, char *argv[])
-{
-	if (argc == 1)
-		ft_error();
-	first_stack(stack_a, argv, argc);
-	check_duplicates(*stack_a);
-	return ;
-}
-*/
