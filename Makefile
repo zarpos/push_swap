@@ -6,7 +6,7 @@
 #    By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/25 19:37:41 by drubio-m          #+#    #+#              #
-#    Updated: 2023/05/26 11:29:52 by drubio-m         ###   ########.fr        #
+#    Updated: 2023/05/26 16:58:31 by drubio-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,14 +26,16 @@ LIBFT = -L$(LIBFT_DIR) $(LIBFT_DIR)$(LIBFT_A)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@make bonus -C $(LIBFT_DIR)
+	@make bonus -C $(LIBFT_DIR) --silent
 	@gcc $(FLAGS) $(OBJS) $(LIBFT) -o $(NAME)
 
 clean:
 	@$(RM) $(OBJS) $(LIBFT_A)
+	@make -C $(LIBFT_DIR) clean --silent
 
 fclean:	clean
 	@$(RM) $(NAME)
+	@make -C $(LIBFT_DIR) clean --silent
 
 re:	fclean
 	@make all

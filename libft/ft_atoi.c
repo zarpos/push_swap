@@ -6,17 +6,17 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 22:46:26 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/25 18:38:31 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/26 16:01:21 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
-	int				i;
+	long			i;
 	int				sign;
-	unsigned int	sol;
+	unsigned long	sol;
 
 	i = 0;
 	sign = 1;
@@ -38,6 +38,7 @@ int	ft_atoi(const char *str)
 		ft_error();
 	return (sol * sign);
 }
+
 /*
 int main(void)
 {

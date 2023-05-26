@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 11:56:30 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/25 20:15:00 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/26 16:03:22 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,6 @@ int		check_sorted(t_list *stack);
 int		get_min(t_list *stack_a);
 int		get_max(t_list *stack_a);
 int		get_index(t_list *stack_a, int number);
+void	ft_free_stack(t_list **stack);
 
 #endif

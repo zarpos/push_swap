@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 00:41:42 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/05/26 11:39:58 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/26 16:59:10 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ void	first_stack(t_list **stack, char *argv[], int argc)
 	while (i < argc)
 	{
 		j = -1;
+		if (ft_strlen(argv[i]) == 0)
+			ft_error();
 		arguments = ft_split(argv[i], ' ');
 		while (arguments[++j])
 		{
