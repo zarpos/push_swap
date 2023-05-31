@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 20:11:09 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/04/03 16:32:09 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/05/30 17:18:39 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ char	**ft_split(char const *s, char c)
 		ft_free_split(str, ft_count_words(s, c));
 	return (str);
 }
+
 //*****************************************************************************
 // INPUT
 // #1. La string a separar.
