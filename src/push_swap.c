@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:25:06 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/06/01 16:22:24 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/06/03 10:41:34 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,6 @@ int	main(int argc, char *argv[])
 		org5(&stack_a, &stack_b);
 	if (ft_lstsize(stack_a) > 5)
 		radix(&stack_a, &stack_b);
-	while (stack_a)
-	{
-		ft_printf("\n%d", stack_a->value);
-		stack_a = stack_a->next;
-	}
 	ft_free_stack(&stack_a);
 	return (0);
 }
