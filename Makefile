@@ -6,7 +6,7 @@
 #    By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/25 19:37:41 by drubio-m          #+#    #+#              #
-#    Updated: 2023/06/03 10:41:23 by drubio-m         ###   ########.fr        #
+#    Updated: 2023/06/05 16:37:41 by drubio-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ clean:
 
 fclean:	clean
 	@$(RM) $(NAME)
-	@make -C $(LIBFT_DIR) clean --silent
+	@make -C $(LIBFT_DIR) fclean --silent
 
 re:	fclean
 	@make all

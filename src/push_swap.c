@@ -6,7 +6,7 @@
 /*   By: drubio-m <drubio-m@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:25:06 by drubio-m          #+#    #+#             */
-/*   Updated: 2023/06/03 10:41:34 by drubio-m         ###   ########.fr       */
+/*   Updated: 2023/06/05 16:36:52 by drubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	main(int argc, char *argv[])
 	if (argc < 2)
 		return (0);
 	first_stack(&stack_a, argv, argc);
+	if (!stack_a)
+		ft_error();
 	check_duplicates(stack_a);
 	indexing_node(&stack_a);
 	sorted = check_sorted(stack_a);
